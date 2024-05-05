@@ -103,7 +103,7 @@
   height: 4px;
   background: transparent;
   position: absolute;
-  bottom: 3px;
+  bottom: 2px;
   left: 0;
   transition: 0.55s ease;
   transform: background;
@@ -126,8 +126,9 @@
   text-align: center;
   gap: 38px;
   position: absolute;
-  left: 593px;
-  top: 200px;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%);
 }
 
 .hero_content {
@@ -159,8 +160,9 @@
 
 .hero_background {
   position: absolute;
-  left: -54.5px;
+  left: 50%;
   bottom: 0;
+  transform: translate(-50%);
   z-index: -1;
 }
 
