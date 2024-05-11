@@ -43,6 +43,20 @@
   display: inline-block;
   cursor: pointer;
   border: none;
+  transition: 0.55s ease;
+  transform: background;
+}
+
+.btn--red:hover {
+  background: #ed5e80;
+}
+
+.btn--blue:hover {
+  background: #39c6f9;
+}
+
+.btn--green:hover {
+  background: #94ebcf;
 }
 
 /* HEADER STYLES */
@@ -281,21 +295,21 @@
   line-height: 20px;
 }
 
-/* CARDS STYLES */
+/* BENEFITS STYLES */
 
-.cards {
+.benefits {
   background: var(--color-gray100);
   padding: 105px 0;
 }
 
-.cards .container {
+.benefits .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 37px;
 }
 
-.card {
+.benefit {
   background: var(--color-white);
   border-radius: 5px;
   border: 1px solid var(--color-gray200);
@@ -305,7 +319,7 @@
   width: 1124px;
 }
 
-.card_content {
+.benefit_content {
   max-width: 416px;
   display: flex;
   flex-direction: column;
@@ -313,14 +327,14 @@
   gap: 30px;
 }
 
-.card_content::after {
+.benefit_content::after {
   content: "";
   width: 328px;
   height: 4px;
   margin-top: 15px;
 }
 
-.card_title {
+.benefit_title {
   font-size: 36px;
   color: var(--color-black);
   font-family: var(--font-family-main);
@@ -328,7 +342,7 @@
   line-height: 42px;
 }
 
-.card_text {
+.benefit_text {
   font-size: 16px;
   color: var(--color-black);
   font-family: var(--font-family-secondary);
@@ -336,28 +350,28 @@
   line-height: 22px;
 }
 
-.card_photo {
+.benefit_photo {
   position: relative;
 }
 
-.card_photo::before {
+.benefit_photo::before {
   content: "";
   position: absolute;
   z-index: 0;
 }
 
-/* card one styles */
+/* benefit one styles */
 
-.card--one .card_content {
+.benefit--one .benefit_content {
   height: 188px;
   margin: 91px 0 91px 35px;
 }
 
-.card--one .card_content::after {
+.benefit--one .benefit_content::after {
   background: var(--color-pink100);
 }
 
-.card_photo.photo--one::before {
+.benefit_photo.photo--one::before {
   width: 190px;
   height: 190px;
   border-radius: 41px;
@@ -367,33 +381,33 @@
   top: 65px;
 }
 
-.card_photo_img.laptop {
+.benefit_photo_img.laptop {
   width: 386px;
   height: 219px;
   margin: 113px 118px 0 0;
   position: relative;
 }
 
-/* card two styles */
+/* benefit two styles */
 
-.card--two {
+.benefit--two {
   flex-direction: row-reverse;
 }
 
-.card--two .card_content .card_title {
+.benefit--two .benefit_content .benefit_title {
   width: 250px;
 }
 
-.card--two .card_content {
+.benefit--two .benefit_content {
   height: 230px;
   margin: 70px 20px 70px 0;
 }
 
-.card--two .card_content::after {
+.benefit--two .benefit_content::after {
   background: var(--color-blue100);
 }
 
-.card_photo.photo--two::before {
+.benefit_photo.photo--two::before {
   width: 320px;
   height: 320px;
   border-radius: 50%;
@@ -402,21 +416,21 @@
   top: 12px;
 }
 
-.card_photo_img.phone {
+.benefit_photo_img.phone {
   width: 426px;
   height: 328px;
   margin: 29px 0 0 70px;
   position: relative;
 }
 
-/* card two styles */
+/* benefit two styles */
 
-.card.card--three {
+.benefit.benefit--three {
   background: transparent;
   border: none;
 }
 
-.card--three .card_content {
+.benefit--three .benefit_content {
   background: var(--color-white);
   border-radius: 5px;
   border: 1px solid var(--color-gray200);
@@ -425,16 +439,16 @@
   padding: 70px 34px 70px 35px;
 }
 
-.card--three .card_content .card_title {
+.benefit--three .benefit_content .benefit_title {
   width: 350px;
 }
 
-.card--three .card_content::after {
+.benefit--three .benefit_content::after {
   background: var(--color-green);
   margin-top: 14px;
 }
 
-.card_photo.photo--three::before {
+.benefit_photo.photo--three::before {
   width: 440px;
   height: 368px;
   border-radius: 5px;
@@ -444,7 +458,7 @@
   top: -38px;
 }
 
-.card_photo_img.trumpet {
+.benefit_photo_img.trumpet {
   width: 296px;
   height: 208px;
   margin: 85px 82px 0 0;
@@ -628,10 +642,6 @@
 .form_contact {
   display: flex;
   gap: 20px;
-  color: var(--color-gray400);
-  font-size: 16px;
-  font-family: var(--font-family-secondary);
-  font-weight: var(--font-weight-semibold);
   margin-top: 20px;
 }
 
@@ -639,6 +649,11 @@
 .form_phone_number {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: var(--color-gray400);
+  font-size: 16px;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-semibold);
 }
 
 .form_email::before,
